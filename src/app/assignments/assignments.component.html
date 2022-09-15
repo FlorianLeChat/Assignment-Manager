@@ -1,3 +1,12 @@
-<p>Visuel du composant enfant "assignments"</p>
+<p>Liste des devoirs à rendre (assignements)</p>
 
-<span>{{nomProf}}</span>
+<table>
+	<div *ngFor="let assignment of assignments">
+		<tr *ngIf="assignment.rendu == false">
+			<td>
+				{{assignment.nom}}, dont la date de rendu est le {{assignment.dateDeRendu | date:'dd/MM/yyyy'}},
+				Rendu ? {{assignment.rendu}}
+			</td>
+		</tr>
+	</div>
+</table>
