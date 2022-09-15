@@ -2,11 +2,16 @@
 
 <table>
 	<div *ngFor="let assignment of assignments">
-		<tr *ngIf="assignment.rendu == false">
+		<tr *ngIf="!assignment.rendu; else nonsoumis">
 			<td>
 				{{assignment.nom}}, dont la date de rendu est le {{assignment.dateDeRendu | date:'dd/MM/yyyy'}},
 				Rendu ? {{assignment.rendu}}
 			</td>
 		</tr>
+		<ng-template #nonsoumis>
+			<p>
+				{{assignment.nom}}, n'a pas rendu à temps : {{assignment.dateDeRendu | date:'dd/MM/yyyy'}},
+			</p>
+		</ng-template>
 	</div>
 </table>
