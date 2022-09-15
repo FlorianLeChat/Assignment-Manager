@@ -2,6 +2,8 @@
 
 <table>
 	<div *ngFor="let assignment of assignments">
+		[ngStyle] = "{'background-color': assignment.rendu ? 'green' : 'red'}"
+
 		<tr *ngIf="!assignment.rendu; else nonsoumis">
 			<td>
 				{{assignment.nom}}, dont la date de rendu est le {{assignment.dateDeRendu | date:'dd/MM/yyyy'}},
