@@ -1,34 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component( {
+@Component({
   selector: 'app-assignments',
   templateUrl: './assignments.component.html',
-  styleUrls: [ './assignments.component.css' ]
-} )
-export class AssignmentsComponent implements OnInit
-{
+  styleUrls: ['./assignments.component.css']
+})
+export class AssignmentsComponent implements OnInit {
+
+  titre = "Mon application sur les Assignments !"
   assignments = [
     {
-      nom: "Devoir Angular à rendre",
-      dateDeRendu: "2022-10-10",
+      nom:"TP1 web components",
+      dateDeRendu:'2022-09-29',
+      rendu: true
+    },
+    {
+      nom:"TP2 Angular",
+      dateDeRendu:'2022-10-13',
       rendu: false
     },
     {
-      nom: "Devoir Java à rendre",
-      dateDeRendu: "2022-09-10",
-      rendu: false
+      nom:"Mini projet angular",
+      dateDeRendu:'2023-01-05',
+      rendu: true
     },
-    {
-      nom: "Devoir BD à rendre",
-      dateDeRendu: "2022-11-10",
-      rendu: false
-    },
-  ];
-
+  ]
   constructor() { }
 
-  ngOnInit(): void
-  {
+  ngOnInit(): void {
   }
 
 }

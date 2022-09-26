@@ -1,3 +1,8 @@
-table, tr, td {
-  border: 1px solid black;
+.rendu{
+    color: green;
+    border: 1px solid black;
+}
+.nonRendu{
+    color: red;
+    border: 1px solid black;
 }
