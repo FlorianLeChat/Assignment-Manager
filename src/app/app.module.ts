@@ -12,18 +12,18 @@ import { MatDatepickerModule } from '@angular/material/datepicker';// On récup�
 import { MatNativeDateModule } from '@angular/material/core';
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { RenduDirective } from './shared/rendu.directive'; // Correspond au module qu'on a créer
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormControl, Validators } from '@angular/forms';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-import { AssignmentDetailComponent } from './assignments/assignment-detail/assignment-detail.component'; 
+import { AssignmentDetailComponent } from './assignments/assignment-detail/assignment-detail.component';
 
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { AddAssignmentComponent } from './assignments/add-assignment/add-assignment.component'; 
-import { AssignmentsService } from './shared/assignments.service'; 
-import { AuthGuard } from './shared/auth.guard'; 
+import { AddAssignmentComponent } from './assignments/add-assignment/add-assignment.component';
+import { AssignmentsService } from './shared/assignments.service';
+import { AuthGuard } from './shared/auth.guard';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -33,53 +33,52 @@ import { EditAssignmentComponent } from './assignments/edit-assignment/edit-assi
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 const routes : Routes = [
-  //home page, ce qui sera affiché avec http://localhost:4200/
-  //ou http://localhost:4200/
-  {path:'', component:AssignmentsComponent},
-  //ou http://localhost:4200/home
-  {path:'home', component:AssignmentsComponent },
-  {path:'add', component:AddAssignmentComponent },
-  {path:'assignment/:id', component:AddAssignmentComponent },
-  {path:'assignment/:id/edit', component:EditAssignmentComponent, canActivate:[AuthGuard] },
-
+	//home page, ce qui sera affiché avec http://localhost:4200/
+	//ou http://localhost:4200/
+	{path:'', component:AssignmentsComponent},
+	//ou http://localhost:4200/home
+	{path:'home', component:AssignmentsComponent },
+	{path:'add', component:AddAssignmentComponent },
+	{path:'assignment/:id', component:AddAssignmentComponent },
+	{path:'assignment/:id/edit', component:EditAssignmentComponent, canActivate:[AuthGuard] },
 ];
 
 @NgModule({
-  declarations: [
-    //Tous les composants dans src/app peuvent utiliser ces modules
-    AppComponent,
-    AssignmentsComponent,
-    RenduDirective,
-    AssignmentDetailComponent,
-    AddAssignmentComponent,
-    EditAssignmentComponent
-  ],
-  imports: [
-    //Pour angular material
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatButtonModule,//on utilise le module button
-    MatIconModule,//on utilise le module icon
-    MatDividerModule,//on utilise le module divider
-    MatInputModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
+	declarations: [
+		//Tous les composants dans src/app peuvent utiliser ces modules
+		AppComponent,
+		AssignmentsComponent,
+		RenduDirective,
+		AssignmentDetailComponent,
+		AddAssignmentComponent,
+		EditAssignmentComponent
+	],
+	imports: [
+		//Pour angular material
+		BrowserModule,
+		BrowserAnimationsModule,
+		MatButtonModule,//on utilise le module button
+		MatIconModule,//on utilise le module icon
+		MatDividerModule,//on utilise le module divider
+		MatInputModule,
+		MatFormFieldModule,
+		FormsModule,
+		MatDatepickerModule,
+		MatNativeDateModule,
 
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    MatCardModule, // des cartes de presentation
-    MatCheckboxModule,
-    MatSlideToggleModule,
-    
-    RouterModule.forRoot(routes),
+		MatToolbarModule,
+		MatSidenavModule,
+		MatListModule,
+		MatCardModule, // des cartes de presentation
+		MatCheckboxModule,
+		MatSlideToggleModule,
 
-    HttpClientModule,
-    
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+		RouterModule.forRoot(routes),
+
+		HttpClientModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
+
 export class AppModule { }
