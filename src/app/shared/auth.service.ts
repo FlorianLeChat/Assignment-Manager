@@ -1,26 +1,50 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root'
 })
+
 export class AuthService {
-  loggedIn=true;
+	// État de connexion de l'utilisateur.
+	loggedIn = false;
 
-  constructor() { }
+	// L'utilisateur est-il un administrateur ?
+	admin = false;
 
-  logIn() {
-    this.loggedIn = true;
-  }
+	// Liste des administrateurs
+	admins: any = {
+		'brahim@gmail.com': '1234',
+	}
 
-  logOut() {
-    this.loggedIn = false;
-  }
+	// Liste des utilisateurs
+	users: any = {
+		'yannis@gmail.com': '1234',
+	}
 
-  // renvoie une promesse qui est résolue si l'utilisateur est loggué
-  isAdmin() {
-    const isUserAdmin = new Promise((resolve, reject) => {
-      resolve(this.loggedIn);
-    });
-    return isUserAdmin;
-  }
+	constructor() { }
+
+	logIn(email: any, password: string) {
+		if (this.admins[email] === password)
+		{
+			this.loggedIn = true;
+			this.admin = true;
+		}
+		else if (this.users[email] === password)
+		{
+			this.loggedIn = true;
+		}
+	}
+
+	logOut() {
+		this.loggedIn = false;
+		this.admin = false;
+	}
+
+	// renvoie une promesse qui est résolue si l'utilisateur est loggué
+	isAdmin() {
+		const isUserAdmin = new Promise((resolve, reject) => {
+			resolve(this.loggedIn && this.admin);
+		});
+		return isUserAdmin;
+	}
 }
