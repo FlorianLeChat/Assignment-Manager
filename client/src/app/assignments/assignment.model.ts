@@ -4,7 +4,7 @@ export class Assignment
 	id!: number;
 	nom!: string;
 	auteur!: string;
-	courseId!: number;
+	course!: number;
 	dateDeRendu!: Date;
 	remarque!: string;
 	note!: number;
