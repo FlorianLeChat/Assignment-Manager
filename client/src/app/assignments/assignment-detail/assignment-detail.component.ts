@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from "@angular/core";
-import { Assignment } from "../../models/assignment.model";
-import { AssignmentsService } from "src/app/shared/assignments.service";
-import { CoursesService } from "src/app/shared/courses.service";
 import { Router } from "@angular/router";
-import { AuthService } from "src/app/shared/auth.service";
+import { Component, Input, OnInit } from "@angular/core";
+
 import { Course } from "../../models/course.model";
+import { Assignment } from "../../models/assignment.model";
+import { AuthService } from "../../shared/auth.service";
+import { CoursesService } from "../../shared/courses.service";
+import { AssignmentsService } from "../../shared/assignments.service";
 
 @Component( {
 	selector: "app-assignment-detail",

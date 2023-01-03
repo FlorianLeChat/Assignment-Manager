@@ -1,45 +1,41 @@
-import { NgModule } from "@angular/core";// L'application de base
-import { BrowserModule } from "@angular/platform-browser";// Permet d'afficher l'application dans un navigateur
-import { MAT_DATE_LOCALE } from "@angular/material/core";
+import { NgModule } from "@angular/core";
 
-import { AppComponent } from "./app.component";
+import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatButtonModule } from "@angular/material/button";// On récupère le module Button
-import { MatIconModule } from "@angular/material/icon";// On récupère le module Icon
-import { MatDividerModule } from "@angular/material/divider";// On récupère le module divider
-import { MatInputModule } from "@angular/material/input";// On récupère le module input
-import { MatFormFieldModule } from "@angular/material/form-field";// On récupère le module form-field
-import { MatDatepickerModule } from "@angular/material/datepicker";// On récupère le module datepicker
-import { MatNativeDateModule } from "@angular/material/core";
-import { MatSelectModule } from "@angular/material/select";
-import { MatTableModule } from "@angular/material/table";
-import { MatSortModule } from "@angular/material/sort";
-import { MatPaginatorModule } from "@angular/material/paginator";
-import { MatStepperModule } from "@angular/material/stepper";
-import { AssignmentsComponent } from "./assignments/assignments.component";
-import { RenduDirective } from "./shared/rendu.directive"; // Correspond au module qu'on a créé
-import { ReactiveFormsModule, FormsModule } from "@angular/forms";
-
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatListModule } from "@angular/material/list";
-import { AssignmentDetailComponent } from "./assignments/assignment-detail/assignment-detail.component";
-
-import { MatCardModule } from "@angular/material/card";
-import { MatCheckboxModule } from "@angular/material/checkbox";
-import { AddAssignmentComponent } from "./assignments/add-assignment/add-assignment.component";
-import { AuthGuard } from "./shared/auth.guard";
 
 import { HttpClientModule } from "@angular/common/http";
 import { RouterModule, Routes } from "@angular/router";
-import { EditAssignmentComponent } from "./assignments/edit-assignment/edit-assignment.component";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+
+import { MatListModule } from "@angular/material/list";
+import { MatCardModule } from "@angular/material/card";
+import { MatSortModule } from "@angular/material/sort";
+import { MatIconModule } from "@angular/material/icon";
+import { MatTableModule } from "@angular/material/table";
+import { MatInputModule } from "@angular/material/input";
+import { MAT_DATE_LOCALE } from "@angular/material/core";
+import { MatButtonModule } from "@angular/material/button";
+import { MatSelectModule } from "@angular/material/select";
+import { MatStepperModule } from "@angular/material/stepper";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatDividerModule } from "@angular/material/divider";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatNativeDateModule } from "@angular/material/core";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 
+import { AuthGuard } from "./shared/auth.guard";
+import { AppComponent } from "./app.component";
+import { AssignmentsComponent } from "./assignments/assignments.component";
+import { AddAssignmentComponent } from "./assignments/add-assignment/add-assignment.component";
+import { EditAssignmentComponent } from "./assignments/edit-assignment/edit-assignment.component";
+import { AssignmentDetailComponent } from "./assignments/assignment-detail/assignment-detail.component";
+
 const routes: Routes = [
-	//home page, ce qui sera affiché avec http://localhost:4200/
-	//ou http://localhost:4200/
 	{ path: "", component: AssignmentsComponent },
-	//ou http://localhost:4200/home
 	{ path: "home", component: AssignmentsComponent },
 	{ path: "add", component: AddAssignmentComponent },
 	{ path: "assignment/:id", component: AddAssignmentComponent },
@@ -48,43 +44,41 @@ const routes: Routes = [
 
 @NgModule( {
 	declarations: [
-		//Tous les composants dans src/app peuvent utiliser ces modules
 		AppComponent,
 		AssignmentsComponent,
-		RenduDirective,
-		AssignmentDetailComponent,
 		AddAssignmentComponent,
-		EditAssignmentComponent
+		EditAssignmentComponent,
+		AssignmentDetailComponent
 	],
 	imports: [
-		//Pour angular material
-		BrowserModule,
-		BrowserAnimationsModule,
-		MatButtonModule,//on utilise le module button
-		MatIconModule,//on utilise le module icon
-		MatDividerModule,//on utilise le module divider
-		MatInputModule,
-		MatFormFieldModule,
+		HttpClientModule,
+
 		FormsModule,
 		ReactiveFormsModule,
-		MatDatepickerModule,
-		MatNativeDateModule,
-		MatSelectModule,
-		MatPaginatorModule,
-		MatTableModule,
-		MatSortModule,
-		MatStepperModule,
 
+		BrowserModule,
+		BrowserAnimationsModule,
+
+		MatIconModule,
+		MatSortModule,
+		MatListModule,
+		MatCardModule,
+		MatInputModule,
+		MatTableModule,
+		MatButtonModule,
+		MatSelectModule,
+		MatDividerModule,
+		MatStepperModule,
 		MatToolbarModule,
 		MatSidenavModule,
-		MatListModule,
-		MatCardModule, // des cartes de presentation
 		MatCheckboxModule,
+		MatFormFieldModule,
+		MatPaginatorModule,
+		MatDatepickerModule,
+		MatNativeDateModule,
 		MatSlideToggleModule,
 
 		RouterModule.forRoot( routes ),
-
-		HttpClientModule,
 	],
 	providers: [
 		{ provide: MAT_DATE_LOCALE, useValue: "fr-FR" },

@@ -1,13 +1,13 @@
-import { Injectable } from "@angular/core";
-import { Assignment } from "../models/assignment.model";
 import { Observable } from "rxjs";
+import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { initialAssignments } from "./data";
-import { Course } from "../models/course.model";
-import { CoursesService } from "./courses.service";
 
-@Injectable( { // injecter tous les services qui ont provideIn root à la racine directement
-	// Permet d'éviter d'ajouter les services dans les modules
+import { Course } from "../models/course.model";
+import { Assignment } from "../models/assignment.model";
+import { CoursesService } from "./courses.service";
+import { initialAssignments } from "./data";
+
+@Injectable( {
 	providedIn: "root"
 } )
 
@@ -24,7 +24,6 @@ export class AssignmentsService
 	constructor( private http: HttpClient, private coursesService: CoursesService ) { }
 
 	url = "http://localhost:8010/api/assignments";
-	//url = "https://api-cours-angular-2023.herokuapp.com/api/assignments";
 
 	// Récupération de tous les devoirs.
 	getAssignments( page: number, limit: number, name: string, rendu: boolean ): Observable<any>

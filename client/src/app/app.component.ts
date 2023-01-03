@@ -1,10 +1,11 @@
-import { Component } from "@angular/core";
 import { Router } from "@angular/router";
+import { Component } from "@angular/core";
 import { FormControl, Validators } from "@angular/forms";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+
 import { AuthService } from "./shared/auth.service";
-import { AssignmentsService } from "./shared/assignments.service";
 import { CoursesService } from "./shared/courses.service";
+import { AssignmentsService } from "./shared/assignments.service";
 
 @Component( {
 	selector: "app-root",

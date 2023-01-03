@@ -1,12 +1,13 @@
-import { OnInit, ViewChild, Component } from "@angular/core";
-import { MatPaginator } from "@angular/material/paginator";
 import { MatSort } from "@angular/material/sort";
+import { MatPaginator } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
-import { AuthService } from "../shared/auth.service";
-import { AssignmentsService } from "../shared/assignments.service";
-import { CoursesService } from "src/app/shared/courses.service";
-import { Assignment } from "../models/assignment.model";
+import { OnInit, ViewChild, Component } from "@angular/core";
+
 import { Course } from "../models/course.model";
+import { Assignment } from "../models/assignment.model";
+import { AuthService } from "../shared/auth.service";
+import { CoursesService } from "../shared/courses.service";
+import { AssignmentsService } from "../shared/assignments.service";
 
 @Component( {
 	selector: "app-assignments",

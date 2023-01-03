@@ -1,10 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { FormBuilder, Validators } from "@angular/forms";
-import { AssignmentsService } from "src/app/shared/assignments.service";
-import { CoursesService } from "src/app/shared/courses.service";
-import { Assignment } from "../../models/assignment.model";
+
 import { Course } from "../../models/course.model";
+import { Assignment } from "../../models/assignment.model";
+import { CoursesService } from "../../shared/courses.service";
+import { AssignmentsService } from "../../shared/assignments.service";
 
 @Component( {
 	selector: "app-edit-assignment",
