@@ -13,7 +13,7 @@ function getCourses( request, result )
 		if ( dbError )
 		{
 			console.log( dbError );
-			return result.send( dbError );
+			return result.send( { message: dbError.message } );
 		}
 
 		return result.send( dbData );
@@ -28,7 +28,7 @@ function getCourse( request, result )
 		if ( dbError )
 		{
 			console.log( dbError );
-			return result.send( dbError );
+			return result.send( { message: dbError.message } );
 		}
 
 		return result.json( dbData );
@@ -49,7 +49,7 @@ function addCourse( request, result )
 		if ( dbError )
 		{
 			console.log( dbError );
-			return result.send( dbError );
+			return result.send( { message: dbError.message } );
 		}
 
 		return result.json( { message: `${ course.nom } saved!` } );

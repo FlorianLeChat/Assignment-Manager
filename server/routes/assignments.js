@@ -29,7 +29,7 @@ function getAssignments( request, result )
 		if ( dbError )
 		{
 			console.log( dbError );
-			return result.send( dbError );
+			return result.send( { message: dbError.message } );
 		}
 
 		return result.send( dbData );
@@ -44,7 +44,7 @@ function getAssignment( request, result )
 		if ( dbError )
 		{
 			console.log( dbError );
-			return result.send( dbError );
+			return result.send( { message: dbError.message } );
 		}
 
 		return result.json( dbData );
@@ -68,7 +68,7 @@ function addAssignment( request, result )
 		if ( dbError )
 		{
 			console.log( dbError );
-			return result.send( dbError );
+			return result.send( { message: dbError.message } );
 		}
 
 		return result.json( { message: `${ assignment.nom } saved!` } );
@@ -83,7 +83,7 @@ function updateAssignment( request, result )
 		if ( dbError )
 		{
 			console.log( dbError );
-			return result.send( dbError );
+			return result.send( { message: dbError.message } );
 		}
 
 		return result.json( { message: "updated" } );
@@ -98,7 +98,7 @@ function deleteAssignment( request, result )
 		if ( dbError )
 		{
 			console.log( dbError );
-			return result.send( dbError );
+			return result.send( { message: dbError.message } );
 		}
 
 		return result.json( { message: `${ dbData.nom } deleted` } );
