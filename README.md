@@ -1,25 +1,33 @@
-# 📚 Suivi des devoirs
+# 👨‍🏫 Suivi des devoirs
 
-Ce projet est une application fonctionnant avec le *framework* [Angular](https://angular.io/) afin de suivre et gérer les devoirs donnés par une équipe pédagogique fictive, ce projet fait office d'une [évaluation](http://miageprojet2.unice.fr/Intranet_de_Michel_Buffa/M1_MIAGE_2021-2022_-_Technologies_Web_-_Angular/Mini-projet_Angular_M1_Miage_2022-2023) donnée pour la première année du Master *Méthodes informatiques appliquées à la gestion des entreprises (MIAGE)* par Monsieur Michel Buffa enseignant les technologies Internet.
+## In French
 
-Afin de faire fonctionner ce projet, <ins>vous devez posséder</ins> :
-- *NodeJS* : v19+ (la version 18 LTS peut aussi fonctionner).
-- *Gestionnaire npm* : v9.2+
+Ce projet réalisé comme [évaluation](http://miageprojet2.unice.fr/Intranet_de_Michel_Buffa/M1_MIAGE_2021-2022_-_Technologies_Web_-_Angular/Mini-projet_Angular_M1_Miage_2022-2023) pour la première année du Master *Méthodes informatiques appliquées à la gestion des entreprises (MIAGE)* par Monsieur Michel Buffa enseignant les technologies Internet, c'est est une application fonctionnant avec le *framework* [Angular](https://angular.io/) afin de suivre et gérer les devoirs donnés par une équipe pédagogique.
 
-**Une connexion Internet est évidemment obligatoire et celle-ci ne doit pas être restreinte au travers d'un serveur mandataire (proxy) ou d'une connexion chiffrée anonyme (VPN).**
+<ins>Voici les exigences pour exécuter le site Internet</ins> :
+* HTML **5** / CSS **3**
+* Angular **15.0+** (côté client)
+* NodeJS **19.3+** (côté serveur)
+* npm **9.3+** (gestionnaire de dépendances)
+* TypeScript **4.8+**
 
-## Compilation du projet
+**Pour installer le projet, il suffit juste d'utiliser la commande `npm start` dans les dossiers `client` et `server` dans deux terminaux séparés après avoir installer les dépendances nécessaires avec la commande `npm install`.**
 
-Pour exécuter ce projet sur votre machine locale, voici ce que vous devez faire :
-- Installer les dépendances npm des dossiers `client` et `server` au travers de la commande `npm install`.
-- Une fois terminé, ouvrez deux terminaux de commande dont l'un sera utilisé dans le dossier `client` pour la partie Angular et l'autre dans le dossier `server` pour le point de terminaison de l'application.
-- Dans le dossier `client`, exécutez la commande `npm start` et patientez l'exécution automatique des scripts d'Angular.
-- Dans le dossier `server`, exécutez la commande `npm start` et patientez que le micro-programme appelé « *nodemon* » génère une instance du serveur NodeJS.
-- Vous pouvez vous lancer, la base de données sera automatiquement connectée !
+⚠️ Ce projet n'étant pas conçu pour un environnement de production et ayant un but éducatif, l'entièreté du code est commentée dans ma langue natale (en français).
 
-## Authentification
+___
 
-Si vous voulez tester ce projet ou si vous êtes l'enseignant en charge de la notation de ce devoir, voici les identifiants pour accéder au compte administrateur :
+## In English
 
-- <ins>Nom d'utilisateur</ins> : `brahim@gmail.com`
-- <ins>Mot de passe</ins> : `1234`
+This project created as an [assessment](http://miageprojet2.unice.fr/Intranet_de_Michel_Buffa/M1_MIAGE_2021-2022_-_Technologies_Web_-_Angular/Mini-projet_Angular_M1_Miage_2022-2023) for the first-year of Master *Méthodes informatiques appliquées à la gestion des entreprises (MIAGE)* by Mr. Michel Buffa teaching Web technologies, it's an application running with the [Angular](https://angular.io/) framework to monitor and manage homework given by a pedagogical team.
+
+<ins>Here are the requirements to run the website</ins>:
+* HTML **5** / CSS **3**
+* Angular **15.0+** (client-side)
+* NodeJS **19.3+** (server-side)
+* npm **9.3+** (dependency manager)
+* TypeScript **4.8+**
+
+**To install the project, just use the `npm start` command in the `client` and `server` folders in two separate terminals after installing the necessary dependencies with the `npm install` command.**
+
+⚠️ Since this project is not designed for a production environment and has an educational purpose, the entire code is commented in my native language (French).
