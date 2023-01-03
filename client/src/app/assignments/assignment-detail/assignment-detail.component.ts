@@ -19,8 +19,8 @@ export class AssignmentDetailComponent implements OnInit
 	@Input() assignmentTransmis?: Assignment;
 
 	// État de connexion.
-	isLogged = this.authService.isLogged;
-	isAdmin = this.authService.isAdmin;
+	isLogged = false;
+	isAdmin = false;
 
 	// Propriétés du composant.
 	courseName = "";
@@ -33,7 +33,11 @@ export class AssignmentDetailComponent implements OnInit
 		private coursesService: CoursesService,
 		private authService: AuthService,
 		private router: Router
-	) { }
+	)
+	{
+		this.isLogged = this.authService.isLogged;
+		this.isAdmin = this.authService.isAdmin;
+	}
 
 	// Méthode d'initialisation.
 	ngOnInit(): void

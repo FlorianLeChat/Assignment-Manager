@@ -23,26 +23,11 @@ export class EditAssignmentComponent implements OnInit
 	courses: Course[] = [];
 
 	// Propriétés pour le formulaire.
-	firstFormGroup = this._formBuilder.group( {
-		firstCtrl: [ "", Validators.required ], // Nom du devoir.
-	} );
-
-	secondFormGroup = this._formBuilder.group( {
-		secondCtrl: [ "", Validators.required ], // Matière du devoir.
-	} );
-
-	thirdFormGroup = this._formBuilder.group( {
-		thirdCtrl: [ "", Validators.required ], // Date de rendu.
-	} );
-
-	fourthFormGroup = this._formBuilder.group( {
-		fourthCtrl: [ "", Validators.required ], // Note du devoir.
-	} );
-
-	fifthFormGroup = this._formBuilder.group( {
-		fifthCtrl: [ "", Validators.required ], // Remarque du devoir.
-	} );
-
+	firstFormGroup: any;
+	secondFormGroup: any;
+	thirdFormGroup: any;
+	fourthFormGroup: any;
+	fifthFormGroup: any;
 	isLinear = true;
 
 	// Fonction de comparaison pour les matières.
@@ -60,7 +45,28 @@ export class EditAssignmentComponent implements OnInit
 		private coursesService: CoursesService,
 		private route: ActivatedRoute,
 		private router: Router
-	) { }
+	)
+	{
+		this.firstFormGroup = this._formBuilder.group( {
+			firstCtrl: [ "", Validators.required ], // Nom du devoir.
+		} );
+
+		this.secondFormGroup = this._formBuilder.group( {
+			secondCtrl: [ "", Validators.required ], // Matière du devoir.
+		} );
+
+		this.thirdFormGroup = this._formBuilder.group( {
+			thirdCtrl: [ "", Validators.required ], // Date de rendu.
+		} );
+
+		this.fourthFormGroup = this._formBuilder.group( {
+			fourthCtrl: [ "", Validators.required ], // Note du devoir.
+		} );
+
+		this.fifthFormGroup = this._formBuilder.group( {
+			fifthCtrl: [ "", Validators.required ], // Remarque du devoir.
+		} );
+	}
 
 	// Méthode d'initialisation.
 	ngOnInit(): void

@@ -55,17 +55,21 @@ export class AssignmentsComponent implements OnInit
 	clickedRows = new Set<Assignment>();
 
 	// État de connexion
-	isLogged = this.authService.isLogged;
+	isLogged = false;
 
 	// L'utilisateur est-il un administrateur ?
-	isAdmin = this.authService.isAdmin;
+	isAdmin = false;
 
 	// Constructeur.
 	constructor(
 		private authService: AuthService,
 		private coursesService: CoursesService,
 		private assignmentsService: AssignmentsService
-	) { }
+	)
+	{
+		this.isLogged = this.authService.isLogged;
+		this.isAdmin = this.authService.isAdmin;
+	}
 
 	// Méthode d'initialisation.
 	ngOnInit(): void

@@ -27,10 +27,10 @@ export class AppComponent
 	hide = true;
 
 	// État de connexion.
-	isLogged = this.authService.isLogged;
+	isLogged = false;
 
 	// L'utilisateur est-il un administrateur ?
-	isAdmin = this.authService.isAdmin;
+	isAdmin = false;
 
 	// Afficher ou cacher le formulaire.
 	loginVisible = false;
@@ -42,7 +42,11 @@ export class AppComponent
 		private router: Router,
 		private assignmentsService: AssignmentsService,
 		private coursesService: CoursesService
-	) { }
+	)
+	{
+		this.isLogged = this.authService.isLogged;
+		this.isAdmin = this.authService.isAdmin;
+	}
 
 	// Méthode d'initialisation.
 	ngOnInit(): void

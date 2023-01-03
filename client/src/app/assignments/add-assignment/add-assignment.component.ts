@@ -21,18 +21,9 @@ export class AddAssignmentComponent implements OnInit
 	courses: Course[] = [];
 
 	// Propriétés pour le formulaire.
-	firstFormGroup = this._formBuilder.group( {
-		firstCtrl: [ "", Validators.required ], // Nom du devoir.
-	} );
-
-	secondFormGroup = this._formBuilder.group( {
-		secondCtrl: [ "", Validators.required ], // Matière du devoir.
-	} );
-
-	thirdFormGroup = this._formBuilder.group( {
-		thirdCtrl: [ "", Validators.required ], // Date de rendu.
-	} );
-
+	firstFormGroup: any;
+	secondFormGroup: any;
+	thirdFormGroup: any;
 	isLinear = true;
 
 	// Constructeur.
@@ -41,7 +32,20 @@ export class AddAssignmentComponent implements OnInit
 		private router: Router,
 		private assignmentsService: AssignmentsService,
 		private coursesService: CoursesService
-	) { }
+	)
+	{
+		this.firstFormGroup = this._formBuilder.group( {
+			firstCtrl: [ "", Validators.required ], // Nom du devoir.
+		} );
+
+		this.secondFormGroup = this._formBuilder.group( {
+			secondCtrl: [ "", Validators.required ], // Matière du devoir.
+		} );
+
+		this.thirdFormGroup = this._formBuilder.group( {
+			thirdCtrl: [ "", Validators.required ], // Date de rendu.
+		} );
+	}
 
 	// Méthode d'initialisation.
 	ngOnInit()
