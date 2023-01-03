@@ -1,8 +1,6 @@
-// Dépendances et configuration du serveur.
+// Configuration du serveur HTTP.
 const express = require( "express" );
 const app = express();
-const cors = require( "cors" );
-const bodyParser = require( "body-parser" );
 
 // Liaison à la base de données MongoDB.
 const mongoose = require( "mongoose" );
@@ -22,7 +20,18 @@ mongoose.connect( uri )
 			console.log( "Erreur de connexion : ", dbError );
 		} );
 
+// Limitation du nombre de requêtes HTTP par minute.
+const rateLimit = require( "express-rate-limit" );
+const limiter = rateLimit( {
+	max: 100,
+	legacyHeaders: false
+} );
+
+app.use( limiter );
+
 // Autorisation des requêtes HTTP ayant des requêtes CORS.
+const cors = require( "cors" );
+
 app.use( cors( {
 	origin: "http://localhost:4200", // Le serveur accepte uniquement les requêtes du domaine front.
 	credentials: true, // La transmission d'informations de connexion est autorisée.
@@ -30,6 +39,8 @@ app.use( cors( {
 } ) );
 
 // Modification du traitement des données reçues par le serveur.
+const bodyParser = require( "body-parser" );
+
 app.use( bodyParser.urlencoded( { extended: true } ) );
 app.use( bodyParser.json() );
 
