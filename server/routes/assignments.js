@@ -78,7 +78,7 @@ function addAssignment( request, result )
 // Mise à jour d'un devoir existant (requête de type PUT).
 function updateAssignment( request, result )
 {
-	Assignment.findByIdAndUpdate( request.body._id, request.body, { new: true }, ( dbError, _dbData ) =>
+	Assignment.findByIdAndUpdate( { $eq: request.body._id }, { $eq: request.body }, { new: true }, ( dbError, _dbData ) =>
 	{
 		if ( dbError )
 		{

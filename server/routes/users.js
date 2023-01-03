@@ -67,7 +67,7 @@ function checkCredentials( request, result )
 	}
 
 	// Recherche de l'utilisateur dans la base de données.
-	UserSchema.findOne( { email: email }, ( dbError, dbData ) =>
+	UserSchema.findOne( { email: { $eq: email } }, ( dbError, dbData ) =>
 	{
 		if ( dbError )
 		{
