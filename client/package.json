@@ -1,40 +1,56 @@
 {
-  "name": "assignment-app",
-  "version": "0.0.0",
+  "main": "main.js",
+  "name": "assignment-manager",
+  "author": "Florian Trayon (https://github.com/FlorianLeChat)",
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FlorianLeChat/Assignment-Manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FlorianLeChat/Assignment-Manager/issues"
+  },
+  "contributors": [
+    "Brahim Lamjarad (https://github.com/Agares1990)"
+  ],
+  "dependencies": {
+    "@angular/cdk": "~15.0",
+    "@angular/core": "~15.0",
+    "@angular/forms": "~15.0",
+    "@angular/router": "~15.0",
+    "@angular/common": "~15.0",
+    "@angular/material": "~15.0",
+    "@angular/compiler": "~15.0",
+    "@angular/animations": "~15.0",
+    "@angular/platform-browser": "~15.0",
+    "@angular/platform-browser-dynamic": "~15.0",
+    "rxjs": "~7.8",
+    "tslib": "~2.4",
+    "zone.js": "~0.12"
+  },
+  "devDependencies": {
+    "@angular/cli": "~15.0",
+    "@types/jasmine": "~4.3",
+    "@angular/compiler-cli": "~15.0",
+    "@angular-devkit/build-angular": "~15.0",
+    "karma": "~6.4",
+    "typescript": "~4.8",
+    "jasmine-core": "~4.5",
+    "karma-jasmine": "~5.1",
+    "karma-coverage": "~2.2",
+    "karma-chrome-launcher": "~3.1",
+    "karma-jasmine-html-reporter": "~2.0"
+  },
+  "engines": {
+    "node": ">=19.3",
+    "npm": ">=9.2"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "~15.0",
-    "@angular/cdk": "~15.0",
-    "@angular/common": "~15.0",
-    "@angular/compiler": "~15.0",
-    "@angular/core": "~15.0",
-    "@angular/forms": "~15.0",
-    "@angular/material": "~15.0",
-    "@angular/platform-browser": "~15.0",
-    "@angular/platform-browser-dynamic": "~15.0",
-    "@angular/router": "~15.0",
-    "rxjs": "~7.8",
-    "tslib": "~2.4",
-    "zone.js": "~0.12"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~15.0",
-    "@angular/cli": "~15.0",
-    "@angular/compiler-cli": "~15.0",
-    "@types/jasmine": "~4.3",
-    "jasmine-core": "~4.5",
-    "karma": "~6.4",
-    "karma-chrome-launcher": "~3.1",
-    "karma-coverage": "~2.2",
-    "karma-jasmine": "~5.1",
-    "karma-jasmine-html-reporter": "~2.0",
-    "typescript": "~4.8"
   }
 }

@@ -8,7 +8,7 @@ Ce projet réalisé comme [évaluation](http://miageprojet2.unice.fr/Intranet_de
 * HTML **5** / CSS **3**
 * Angular **15.0+** (côté client)
 * NodeJS **19.3+** (côté serveur)
-* npm **9.3+** (gestionnaire de dépendances)
+* npm **9.2+** (gestionnaire de dépendances)
 * TypeScript **4.8+**
 
 **Pour installer le projet, il suffit juste d'utiliser la commande `npm start` dans les dossiers `client` et `server` dans deux terminaux séparés après avoir installer les dépendances nécessaires avec la commande `npm install`.**
@@ -25,7 +25,7 @@ This project created as an [assessment](http://miageprojet2.unice.fr/Intranet_de
 * HTML **5** / CSS **3**
 * Angular **15.0+** (client-side)
 * NodeJS **19.3+** (server-side)
-* npm **9.3+** (dependency manager)
+* npm **9.2+** (dependency manager)
 * TypeScript **4.8+**
 
 **To install the project, just use the `npm start` command in the `client` and `server` folders in two separate terminals after installing the necessary dependencies with the `npm install` command.**
