@@ -2,6 +2,7 @@
   "name": "assignment-manager",
   "author": "Florian Trayon (https://github.com/FlorianLeChat)",
   "license": "UNLICENSED",
+  "private": true,
   "version": "1.0.0",
   "repository": {
     "type": "git",
