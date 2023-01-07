@@ -11,7 +11,7 @@ Ce projet réalisé comme [évaluation](http://miageprojet2.unice.fr/Intranet_de
 * npm **9.2+** (gestionnaire de dépendances)
 * TypeScript **4.8+**
 
-**Pour installer le projet, il suffit juste d'utiliser la commande `npm start` dans les dossiers `client` et `server` dans deux terminaux séparés après avoir installer les dépendances nécessaires avec la commande `npm install`.**
+**Pour installer le projet, il suffit juste d'utiliser la commande `npm start` dans les dossiers `client` et `server` dans deux terminaux séparés après avoir installer les dépendances nécessaires avec la commande `npm install`. Une image Docker est d'ailleurs disponible pour tester ce projet ! 🐳**
 
 ⚠️ Ce projet n'étant pas conçu pour un environnement de production et ayant un but éducatif, l'entièreté du code est commentée dans ma langue natale (en français).
 
@@ -28,6 +28,6 @@ This project created as an [assessment](http://miageprojet2.unice.fr/Intranet_de
 * npm **9.2+** (dependency manager)
 * TypeScript **4.8+**
 
-**To install the project, just use the `npm start` command in the `client` and `server` folders in two separate terminals after installing the necessary dependencies with the `npm install` command.**
+**To install the project, just use the `npm start` command in the `client` and `server` folders in two separate terminals after installing the necessary dependencies with the `npm install` command. A Docker image is also available to test this project! 🐳**
 
 ⚠️ Since this project is not designed for a production environment and has an educational purpose, the entire code is commented in my native language (French).
